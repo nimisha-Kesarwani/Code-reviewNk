@@ -7,7 +7,7 @@ test("validating sidebar logic with 7 opened chats", async ({ page }) => {
   const loginPage = new LoginPage(page);
 
 
-  const email = process.env.TEST_EMAIL as 0000000000000;
+  const email = process.env.TEST_EMAIL as string;
   const password = process.env.TEST_PASSWORD as string;
   //  await page.pause();                                       
   await loginPage.gotoLoginPage();
