@@ -12,7 +12,7 @@ test.describe('Login', () => {
     // Template: Replace with assertion that means login succeeded
     await expect(page).toHaveURL(/dashboard|home|profile/); // Update as needed
     // Or check for existence of a logout button, user profile, etc.
-    // await expect(page.locator('text=Logout')).toBeVisible();
+    await expect(page.locator('text=Logout')).toBeVisible();
   });
 
   test('should show error for invalid credentials', async ({ page }) => {
@@ -23,8 +23,8 @@ test.describe('Login', () => {
     await page.click('button[type="submit"]');
 
     // Template: Replace with error message/selector as appropriate
-    await expect(page.locator('.error-message')).toBeVisible();
+    // await expect(page.locator('.error-message')).toBeVisible();
     // Or:
-    // await expect(page.locator('text=Invalid credentials')).toBeVisible();
+    await expect(page.locator('text=Invalid credentials')).toBeVisible();
   });
 });
