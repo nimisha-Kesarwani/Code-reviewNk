@@ -49,15 +49,19 @@ export class LoginPage {
   }
 
 
-async openFirstModule() {
+// async openFirstModule() {
 
- if(await this.page.locator(LoginPageLocators.hiddenArrow).isVisible())
+//  if(await this.page.locator(LoginPageLocators.hiddenArrow).isVisible())
 
- await this.page.locator(LoginPageLocators.hiddenArrow).click()
+//  await this.page.locator(LoginPageLocators.hiddenArrow).click()
 
- await this.page.locator(LoginPageLocators.moduleOption).first().click();
+//  await this.page.locator(LoginPageLocators.moduleOption).first().click();
 
- }
+//  }
+
+    async openFirstModule() {
+     await this.page.locator(LoginPageLocators.moduleOption).first().click();
+  }
  
 }
 
